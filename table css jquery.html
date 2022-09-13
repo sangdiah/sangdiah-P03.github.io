@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Keluarga</title>
+  </head>
+  <body>
+<h1>7 Keluarga Terbaik</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<style>
+  td {
+    background-color: #6495ED;
+    cursor: pointer;
+    transition: .2s;
+  }
+
+  td:hover{
+    background: black;
+  }
+  .tabelku{
+    width: 100%;
+    max-width: 400px;
+  }
+</style>
+
+<table class="tabelku">
+  <tr>
+    <td>No</td>
+    <td>Nama</td>
+    <td>Alamat</td>
+    <td>Aksi</td>
+  </tr>
+
+  <tr id="row__1">
+    <td>01</td>
+    <td class="nama_mhs">Sangdiah</td>
+    <td>Cirebon</td>
+    <td class="hapus" id="hapus__1">Hapus</td>
+  </tr>
+
+  <tr id="row__2">
+    <td>02</td>
+    <td class="nama_mhs">Gilang Wahyu</td>
+    <td>Cirebon</td>
+    <td class="hapus" id="hapus__2">Hapus</td>
+  </tr>
+
+  <tr id="row__3">
+    <td>03</td>
+    <td class="nama_mhs">Elis Tiyani</td>
+    <td>Cirebon</td>
+    <td class="hapus" id="hapus__3">Hapus</td>
+  </tr>
+
+  <tr id="row__4">
+    <td>04</td>
+    <td class="nama_mhs">Syifa</td>
+    <td>Cirebon</td>
+    <td class="hapus" id="hapus__4">Hapus</td>
+  </tr>
+
+  <tr id="row__5">
+    <td>05</td>
+    <td class="nama_mhs">Nikhlatul Maolah</td>
+    <td>Cirebon</td>
+    <td class="hapus" id="hapus__5">Hapus</td>
+  </tr>
+
+  <tr id="row__6">
+    <td>06</td>
+    <td class="nama_mhs">Sutinah</td>
+    <td>Cirebon</td>
+    <td class="hapus" id="hapus__6">Hapus</td>
+  </tr>
+
+  <tr id="row__7">
+    <td>07</td>
+    <td class="nama_mhs">Syarif</td>
+    <td>Cirebon</td>
+    <td class="hapus" id="hapus__7">Hapus</td>
+  </tr>
+</table>
+
+<script>
+  $(document).ready(function(){
+    //alert(0)
+    $('.nama_mhs').click(function(){
+      //alert(1);
+      Let isi = $(this).text();
+      //alert(isi);
+
+      Let isi2 = prompt('Ubah dengan:', isi);
+      if(!isi2) return;
+      //alert(isi2);
+
+      $(this).text(isi2);
+    })
+  })
+</script>
+
+<script>
+  $(document).ready(function(){
+    //alert(0)
+    $('.hapus').click(function(){
+      //alert(1)
+      Let yakin = confirm('Yakin mau menghapus');
+      if(!yakin) return;
+
+      Let id = $(this).prop('id')
+      //alert(id);
+      Let baris_ke = '';
+
+      Led rid = id.sprit('__');
+      Let baris_ke = rid[1];
+
+      //alert(baris_ke);
+
+      $('#row__'+baris_ke)-slideUp()
+
+      //alert('Anda yakin')
+    })
+  })
+</script>
+  </body>
+</html>
